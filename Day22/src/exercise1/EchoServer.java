@@ -11,6 +11,7 @@ public class EchoServer extends UnicastRemoteObject implements EchoService {
     public EchoServer() throws RemoteException {
     // nothing to initialise for this server, but it is important
     // to declare that the constructor throws RemoteException
+        // server
 
     }
 
