@@ -40,5 +40,6 @@ public class EchoClientLauncher {
             System.out.println("Malformed Url");
 
         }
+
     }
 }

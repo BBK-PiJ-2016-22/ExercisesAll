@@ -1,5 +1,8 @@
 package exercise1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class IntegerTreeNode{
 	
 	private int value; 
@@ -7,9 +10,11 @@ public class IntegerTreeNode{
 	private IntegerTreeNode right;
 	private static StringBuilder returnString = new StringBuilder();
 
+    public int getValue() {
+        return value;
+    }
 
-
-	public IntegerTreeNode(int value) {
+    public IntegerTreeNode(int value) {
 
 	    this.value = value;
 	}
@@ -128,6 +133,24 @@ public class IntegerTreeNode{
             counter--;
         }
         return depth;
+    }
+    private static List<IntegerTreeNode> toReturn = new ArrayList<>();
+
+    private void helper(){
+        if(left != null){
+            left.helper();
+        }
+
+        toReturn.add(this);
+
+        if(right != null){
+            right.helper();
+        }
+
+    }
+    public List<IntegerTreeNode> trave(){
+        helper();
+        return  toReturn;
     }
 
 

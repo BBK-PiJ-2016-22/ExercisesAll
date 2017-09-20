@@ -46,6 +46,7 @@ public class TreeLauncher{
 		System.out.println(newTree.toString());
 
 		System.out.println(newTree.depth());
+		newTree.trave().forEach(a -> System.out.println(a.getValue()));
 
 
 
